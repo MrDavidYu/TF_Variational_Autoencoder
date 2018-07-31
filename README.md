@@ -1,5 +1,5 @@
 # TF_Variational_Autoencoder
-Variational autoencoder for compressing/reconstructing RGB inputs (CelebA) in TensorFlow
+#### _Variational autoencoder for compressing/reconstructing RGB inputs (CelebA) in TensorFlow with high compression_
 
 N.B. This project is mostly a clone of my previous project https://github.com/MrDavidYu/TF_Convolutional_Autoencoder and so will be very sparce in its documentation.
 
@@ -21,3 +21,8 @@ def vae_loss(input_img, output, input_mu, input_log_sig):
   return total_loss
 ```
 3. A block of (commented) code for visualizing the bottleneck layer has been added in the training step. This block of code requires the batch size to be 111 and const_latent_dim to be 2, since we can only view outputs in 2D. This limitation also means that the model can potentially become unstable in training and lead to an exploding gradient problem. This was encountered after 2000 steps of training, but not before some good visual clusters were produced by the bottleneck layer (see following illustration). Note in application the const_latent_dim should be kept at 64 (or larger) for optimal convergence.
+
+## Clustering Visualization
+The following graphs are the difference in RGB channels between step 1 and step 2000. Note for regression RGB input it is difficult to produce clear clusters as one would expect from say MNIST, hence the following serves as only a crude demonstration of the ability of VAEs to roughly produce coherent clusters based on value averages of each color channel.
+<img src="https://github.com/MrDavidYu/TF_Variational_Autoencoder/blob/master/sample_output/scatter_1.png" height="320" />
+<img src="https://github.com/MrDavidYu/TF_Variational_Autoencoder/blob/master/sample_output/scatter_2000.png" height="320" />
