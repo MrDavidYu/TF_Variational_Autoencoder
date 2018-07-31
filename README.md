@@ -1,7 +1,7 @@
 # TF_Variational_Autoencoder
 #### _Variational autoencoder for compressing/reconstructing RGB inputs (CelebA) in TensorFlow with high compression_
 
-N.B. This project is mostly a clone of my previous project https://github.com/MrDavidYu/TF_Convolutional_Autoencoder and so will be very sparce in its documentation.
+N.B. This project is mostly a clone of my previous project https://github.com/MrDavidYu/TF_Convolutional_Autoencoder and so will be very sparce in its documentation. Please reference the link for more detail.
 
 The following changes are made to this project on top of a Convolutional Autoencoder:
 1. The following mean and stddev layers are added to the bottleneck layer:
