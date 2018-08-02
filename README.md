@@ -24,5 +24,6 @@ def vae_loss(input_img, output, input_mu, input_log_sig):
 
 ## Clustering Visualization
 The following graphs are the difference in RGB channels (in the latent tensor) between step 1 and step 2000. Note for regression RGB input it is difficult to produce clear clusters as one would expect from say MNIST, hence the following serves as only a crude demonstration of the ability of VAEs to roughly produce coherent clusters based on value averages of each color channel.
+<br>
 <img src="https://github.com/MrDavidYu/TF_Variational_Autoencoder/blob/master/sample_output/scatter_1.png" height="320" />
 <img src="https://github.com/MrDavidYu/TF_Variational_Autoencoder/blob/master/sample_output/scatter_2000.png" height="320" />
